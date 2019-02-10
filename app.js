@@ -52,9 +52,12 @@ app.set('view engine', 'hbs');
          name: "Ironhacker",
         //  bootcamp: "IronHack WebDev"
         lastName: "Taylan",
-        address: "Your heart",
+        address: {
+            street: "Your heart",
+            number: 87
+        },
         cities: ["Miami", "Madrid", "Barcelona", "Paris", "Mexico", "Berlin" ]
-     }
+     };
      res.render('index', data);
  });
  app.listen(3000);
