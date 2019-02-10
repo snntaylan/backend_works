@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My first view</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+  <h1>Hello {{name}} {{lastName}}!</h1>
+{{!-- {{#if adress}}
+<h2>This won't be displayed!!</h2>
+{{else}}
+<h2>This will be displayed because the "address" property does not exists!!</h2>
+  <img src="https://media.giphy.com/media/l0MYEqEzwMWFCg8rm/giphy.gif">
+  {{/if}} --}}
+
+{{!-- #####{{unless}}#### --}}
+{{!-- {{#unless address}}
+  <h3>WARNING: We can't find the address!</h3>
+{{/unless}} --}}
+
+
+{{!-- each --}}
+<ul>
+    {{#each cities}}
+    <li>{{this}}</li>
+    {{else}}
+    <p>No cities yet!</p>
+    {{/each}}
+</ul>
+
+{{!-- index --}}
+<ul>
+    {{#each cities}}
+    <li>{{@index}}: {{this}}</li>
+    {{/each}}
+</ul>
+
+{{!-- key --}}
+{{#each object}}
+{{@key}}: {{this}}
+{{/each}}
+
+</body>
+</html>
